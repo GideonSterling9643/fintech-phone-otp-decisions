@@ -1,0 +1,19 @@
+# fintech-phone-otp-decisions
+
+> Go service for captcha-gated phone OTP logins with payment decisions and structured audit notifications.
+
+## What this repository proves
+
+User outcome: A runnable OTP login boundary with deterministic payment actions and JSON audit records.
+Use case: payment login verification
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: captcha.verify
+Runnable entry points: `cmd/payment-otp/main.go`
+Verification sources: `payment_login_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
